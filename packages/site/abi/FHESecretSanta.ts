@@ -371,5 +371,5 @@ export const FHESecretSantaABI = {
             "stateMutability": "nonpayable",
             "type": "function"
         }
-    ],
+    ]
 } as const;

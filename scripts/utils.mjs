@@ -2,7 +2,7 @@ import { execSync } from "child_process";
 import * as path from "path";
 import * as fs from "fs";
 
-const CONTRACTS_PACKAGE_DIR = "fhevm-hardhat-template";
+const CONTRACTS_PACKAGE_DIR = "fhe-secret-santa";
 
 function getContractsPackageName() {
   const pkgDir = path.resolve(`./packages/${CONTRACTS_PACKAGE_DIR}`);
@@ -111,16 +111,8 @@ function npmHardhatDeploy(network) {
     process.exit(1);
   }
 }
-
+// //
 export async function generateSiteABI() {
-  // To generate the addresses, we basically use the 'hardhat-deploy' plugin
-  // In the contracts package directory, the typescript file 'deploy/deploy.ts' contains a call to 'postDeploy'
-  // whose main goal is to generate the site/abi/<ContractName>Addresses.ts + site/abi/<ContractName>ABI.ts
-  // typescript files after the deploy is completed.
-  //
-  // If the hardhat node is running, we call 'npx hardhat deploy --network localhost'
-  // otherwise we call 'npx hardhat deploy' using in-memory node.
-  const network =
-    (await tryGetBlockNumber()) !== undefined ? "localhost" : undefined;
-  npmHardhatDeploy(network);
+  // For Sepolia, just deploy to that network
+  npmHardhatDeploy("sepolia");
 }

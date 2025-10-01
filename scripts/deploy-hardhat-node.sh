@@ -7,7 +7,7 @@ set -euo pipefail # Exit on error, undefined vars, and pipe errors
 # Config Parameters
 # *****************************************************************************
 
-CONTRACTS_PACKAGE_DIR="fhevm-hardhat-template" # Dirname of the contracts package
+CONTRACTS_PACKAGE_DIR="fhe-secret-santa" # Dirname of the contracts package
 HARDHAT_NODE_PORT=8545
 HARDHAT_NODE_HOST=127.0.0.1
 HARDHAT_NODE_URL="http://${HARDHAT_NODE_HOST}:${HARDHAT_NODE_PORT}"
