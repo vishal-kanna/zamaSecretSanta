@@ -11,11 +11,12 @@ import "solidity-coverage";
 
 import "./tasks/accounts";
 import "./tasks/FHECounter";
+import "./tasks/FHESecretaSanta"
 
 // Run 'npx hardhat vars setup' to see the list of variables that need to be set
 
-const MNEMONIC: string = vars.get("MNEMONIC", "test test test test test test test test test test test junk");
-const INFURA_API_KEY: string = vars.get("INFURA_API_KEY", "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+const MNEMONIC: string = vars.get("MNEMONIC", "option that sniff merge mask orange bus wing cluster bachelor opera lawsuit");
+const INFURA_API_KEY: string = vars.get("INFURA_API_KEY", "https://sepolia.infura.io/v3/dc8585d49e0e46528c18b0f93b7ad6af");
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",

@@ -17,5 +17,8 @@
     "hardhat-node": "npx -w ./packages/fhevm-hardhat-template hardhat node --verbose",
     "deploy:sepolia": "npx -w ./packages/fhevm-hardhat-template hardhat deploy --network sepolia",
     "deploy:hardhat-node": "npm run is-hardhat-node-running && npx -w ./packages/fhevm-hardhat-template hardhat deploy --network localhost"
+  },
+  "dependencies": {
+    "lucide-react": "^0.544.0"
   }
 }
